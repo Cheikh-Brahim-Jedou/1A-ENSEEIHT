@@ -1,0 +1,20 @@
+[GENERATED OBJECT FILE]
+b__test_piles.o
+[PROJECT FILES]
+C:\Users\hp\Desktop\ENSSEIHT\tp pim\TP07 (1)\TP07\tp07.gpr
+20240922160716 6df9decdd4316a6bee5c07a571dab63b
+[BOUND OBJECT FILES]
+C:\Users\hp\Desktop\ENSSEIHT\tp pim\TP07 (1)\TP07\piles.o
+C:\Users\hp\Desktop\ENSSEIHT\tp pim\TP07 (1)\TP07\test_piles.o
+[GENERATED SOURCE FILES]
+b__test_piles.ads
+b__test_piles.adb
+b__test_piles.ali
+[RESULTING OPTIONS]
+-LC:\Users\hp\Desktop\ENSSEIHT\tp pim\TP07 (1)\TP07\
+-LC:\Users\hp\Desktop\ENSSEIHT\tp pim\TP07 (1)\TP07\
+-LC:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/
+-static
+-static-libgcc
+C:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/libgnat.a
+-Wl,--stack=0x2000000
