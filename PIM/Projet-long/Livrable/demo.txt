@@ -1,0 +1,35 @@
+Pour la demonstration :
+on commence par verifier que les tests de chaque module fonctionne bien sans avertissement .
+par exemple, pour le test du module de huffman on verifie l'implantation de la procedure cree-sign-arb qui permet de construire l'arbre de huffman appartir d'une liste de caractere et une signature 
+ 
+ on commence par tester le programme compresser en plusieur Cas
+  1. avec un fichier exemple.txt qui contient les deux lignes fournie dans le debut du sujet de projet , on verifie que l'arbre obtenu
+  et la table de huffman sont exacte en comparant avec ceux dans le projet. 
+  
+  2. on excute le programme avec l'option -b , on constate que l'arbre de huffman et la table de huffman s'affichent sur l'écran avec la creation du fichier .hff
+  
+  3. on excute avec l'option -s , on constate qu'il n'y a pas d'affichage de l'arbre 
+  
+  4. on exécute le programme sans option , on constate que par defaut , l'option  b est activée.
+  
+  5. on exécute avec l'option -s  -b -s , on remarque que  la derniere option est considerée comme celle active , car dans le code on considere l'option avant le dernier argument ( le derniere étant le nom du fichier )
+  
+  6. on exécute avec valgrind , on constate qu'il n'y a aucune fuite de mémoire 
+  
+  7. on essaie avec un fichier dont le  nom n'existe pas sur le repertoire , une exception est levée (raised ADA.IO_EXCEPTIONS.NAME_ERROR)
+  
+  8. on essaie de donner un argument au hasard , une exception est levée (raised COMPRESSER.INVALID_ARGUMENT )
+  
+pour le programme decompresser ,  on teste :
+ 1. on exécute le programme avec un fichier qui n'a pas l'extension .hff , une exception est levée ( raised Non_Huffman_File )
+ 
+ 2. on excute avec valgrind , on vérifie qu'il n'y aucune fuite de memoire e
+ 
+ 3. on exécute le programme avec plus d'un argument , exception est levée ( pour le programme decompresser , il ne doit y avoir qu'un seul argument, qui est le nom du fichier )
+ 
+ 4. on exécute le programme sans fournir argument , une exception est levée ( raised Pas_Argument)
+ 
+ 5. on exécute le programme avec un fichier qui n'exsite pas sur le repertoire , une exception est levée (Non_Huffman_File)
+
+
+  
