@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project >
+    <file_marker column=" 1" line=" 67" >
+      <vfs_project>/home/cbu6893/Bureau/git/tp/pr02/pr02.gpr</vfs_project>
+      <vfs_file>/home/cbu6893/Bureau/git/tp/pr02/lca.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 32" >
+      <vfs_project>/home/cbu6893/Bureau/git/tp/pr02/pr02.gpr</vfs_project>
+      <vfs_file>/home/cbu6893/Bureau/git/tp/pr02/lca.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 20" line=" 11" >
+      <vfs_project>/home/cbu6893/Bureau/git/tp/pr02/pr02.gpr</vfs_project>
+      <vfs_file>/home/cbu6893/Bureau/git/tp/pr02/lca_sujet.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/cbu6893/Bureau/git/tp/pr02/pr02.gpr</vfs_project>
+      <vfs_file>/home/cbu6893/Bureau/git/tp/pr02/exemple_unbounded_string.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 102" >
+      <vfs_project>/home/cbu6893/Bureau/git/tp/pr02/pr02.gpr</vfs_project>
+      <vfs_file>/home/cbu6893/Bureau/git/tp/pr02/test_lca.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 54" line=" 69" >
+      <vfs_project>/home/cbu6893/Bureau/git/tp/pr02/pr02.gpr</vfs_project>
+      <vfs_file>/home/cbu6893/Bureau/git/tp/pr02/th.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 80" >
+      <vfs_project>/home/cbu6893/Bureau/git/tp/pr02/pr02.gpr</vfs_project>
+      <vfs_file>/home/cbu6893/Bureau/git/tp/pr02/th.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 370" >
+      <vfs_project>/home/cbu6893/Bureau/git/tp/pr02/pr02.gpr</vfs_project>
+      <vfs_file>/home/cbu6893/Bureau/git/tp/pr02/test_th.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 30" line=" 29" >
+      <vfs_project>/home/cbu6893/Bureau/git/tp/pr02/pr02.gpr</vfs_project>
+      <vfs_file>/home/cbu6893/Bureau/git/tp/pr02/th_sujet.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 25" line=" 81" >
+      <vfs_project>/home/cbu6893/Bureau/git/tp/pr02/pr02.gpr</vfs_project>
+      <vfs_file>/home/cbu6893/Bureau/git/tp/pr02/evaluer_alea_lca.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 33" line=" 79" >
+      <vfs_project>/home/cbu6893/Bureau/git/tp/pr02/pr02.gpr</vfs_project>
+      <vfs_file>/home/cbu6893/Bureau/git/tp/pr02/evaluer_alea_th.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/cbu6893/Bureau/git/tp/pr02/pr02.gpr</vfs_project>
+      <vfs_file>/home/cbu6893/Bureau/git/tp/pr02/sda_exceptions.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/cbu6893/Bureau/git/tp/pr02/pr02.gpr</vfs_project>
+      <vfs_file>/home/cbu6893/Bureau/git/tp/pr02/evaluer_alea_lca.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/cbu6893/Bureau/git/tp/pr02/pr02.gpr</vfs_project>
+      <vfs_file>/home/cbu6893/Bureau/git/tp/pr02/evaluer_alea_th.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/home/cbu6893/Bureau/git/tp/pr02/pr02.gpr</vfs_project>
+      <vfs_file>/home/cbu6893/Bureau/git/tp/pr02/evaluer_alea_lca.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>/home/cbu6893/Bureau/git/tp/pr02/pr02.gpr</vfs_project>
+      <vfs_file>/home/cbu6893/Bureau/git/tp/pr02/evaluer_alea_th.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

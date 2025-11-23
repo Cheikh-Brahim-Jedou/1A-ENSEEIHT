@@ -1,0 +1,84 @@
+% Compte-rendu minimal du mini-projet SDA : LCA et TH
+% Auteur : Brahim Jedou Cheikh
+% Groupe de TP : A
+
+
+**Consigne :** Vous devez écrire vos réponse à la place des ... en laissant
+une ligne vide avant et deux après votre réponse.
+
+**Remarque :** Ce document utilise le langage Markdown. On peut en engendrer
+une version PDF en faisant par exemple :
+
+~~~
+pandoc --toc -N -o LISEZ-MOI.pdf LISEZ-MOI.txt
+~~~
+
+
+# Exercice 1
+
+## Question 1.4
+
+**Indiquer les inconvénients/avantages d'une implantation par listes chaînées
+d'une SDA.**
+
+Avantages
+1- Contrairement aux tableaux ,la taille d'une liste chainée peut croitre ou decroite selon la besoin , sans avoir a s'inquiter de la capacite initial de la liste. 
+
+inconvénients
+1- Nous savons que chaque éléments de la liste necessite une quantité de memoire pour stocker le pointeur vers l'element suivant. Donc
+il y forte consommation de memoire
+2- Fréquemment , il y a des fuites de mémoire .
+3-Pour accéder à un élément, il faut parcourir toute la liste, ce qui est coûteux en termes de temps. 
+
+
+# Évaluation expérimentale.
+
+## Performance comparée de LCA et TH
+
+Indiquer ici les résultats obtenus.
+
+les resultas nous montre que TH est plus performent que T et Surtout pour des grandes tailles, ou  TH devient trés lent 
+par exemple pour (Borne = 10^4 et Taille= 10^7) le temps reel du lca est de 4mn tandis que celui d th atteint 18mn 
+
+
+## Qualité du générateur aléatoire
+
+Indiquer les conclusions quant à la qualité du générateur aléatoire.
+
+
+...
+
+
+# Principales difficultés rencontrées
+
+Indiquer ici les principales difficultés rencontrées lors de la réalisation de
+ce projet et comment elles ont été surmontées ou contournéeS.
+
+
+J'ai rencontré beaucoup de difficultés dans la construction du module TH , en me basant sur le module LCA, particulièrement lors de
+l'implantation. Ces difficultés étaient principalement dues à des erreurs et avertissements affichés par le compilateur. Pour
+surmonter ces obstacles, je suis revenu à mes cours et j'ai pris le temps de bien comprendre les concepts ainsi que les messages 
+d'erreur. Cela m'a permis de corriger les problèmes rencontrés et de mener à bien l'implantation du module.
+
+
+# Informations complémentaires
+
+Indiquer ici les informations qui pourraient aider à la compréhension du
+travail réalisé.
+
+Cette partie peut être vide.
+
+...
+
+
+
+# Bilan personnel
+
+Quel bilan personnel tirez-vous de ce mini-projet ?
+
+
+Dans ce mini-projet ,j'ai principalement travaillé sur le conception et l'implantation des  modules LCA et TH . cette experience m'a permis de renfoncé mes competences en Ada et surtout dans la gestion des stuctures de données dynamique 
+le travail sur ces deux module m'a aidé a bien comprendre la difference des performence de  Liste Chainé et Table de Hachage et 
+le cas adapté a l'utilisation a chaque  .
+pour conclure , ce mini projet a permis de faire des applications directs a des notions vues en cours et de l'appliquer sur des problémes concrets .
+
