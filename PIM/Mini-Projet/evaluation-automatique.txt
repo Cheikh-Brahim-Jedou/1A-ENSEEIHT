@@ -1,0 +1,141 @@
+% Validation de pr01
+% 2024-10-15 22:34:37.090033
+
+
+################################################################################
+# Modification des fichiers fournis
+################################################################################
+
+
+================================================================================
+## Fichiers qui NE devaient PAS être modifiés
+================================================================================
+
+* Fichier alea.adb non modifié... ok
+* Fichier alea.ads non modifié... ok
+
+================================================================================
+## Fichiers qui DEVAIENT être modifiés
+================================================================================
+
+* Fichier allumettes.adb modifié... ok
+* Fichier LISEZ-MOI.txt modifié... ok
+* Fichier raffinages.pdf modifié... Non rendu !
+
+
+################################################################################
+# Nettoyer
+################################################################################
+
+* Running gnatclean... ok
+
+
+################################################################################
+# Compilations
+################################################################################
+
+* Compilation de allumettes.adb... ok
+* Running gnatclean... ok
+
+
+################################################################################
+# Exécutions
+################################################################################
+
+* Running gnatclean... ok
+
+================================================================================
+## Exécution de allumettes
+================================================================================
+
+* Compilation de allumettes.adb... ok
+
+--------------------------------------------------------------------------------
+### Test rapide-perdu-avec-erreurs.run
+--------------------------------------------------------------------------------
+
+* ./allumettes <<EOF r n -2 0 4 1 1 3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 EOF... ok
+* Comparaison de rapide-perdu-avec-erreurs.expected et rapide-perdu-avec-erreurs.out... différents
+
+   | Mon niveau est rapide.                                                    |  Mon niveau est rapide 
+   |                                                                           |  je prends3  allumettes
+   | Je prends 3 allumettes.                                                   <
+   |                                                                           <
+   | Arbitre : Il faut prendre au moins une allumette.                         |  Arbitre : Il faut prendre au moins une allumette.Combien d'allumettes pre
+   | Combien d'allumettes prenez-vous ? 0                                      |  Arbitre : Il faut prendre au moins une allumette.Combien d'allumettes pre
+   | Arbitre : Il faut prendre au moins une allumette.                         <
+   | Combien d'allumettes prenez-vous ? 4                                      <
+   |                                                                           |  je prends3  allumettes
+   | Je prends 3 allumettes.                                                   <
+   |                                                                           <
+   |                                                                           |  je prends3  allumettes
+   | Je prends 3 allumettes.                                                   <
+   |                                                                           <
+   | Arbitre : Il reste seulement 2 allumettes.                                |  Il reste seulement 2 allumettes
+   | J'ai gagne.                                                               |
+   |                                                                           >
+   |                                                                           >  J'ai gagne
+
+
+--------------------------------------------------------------------------------
+### Test rapide-gagne.run
+--------------------------------------------------------------------------------
+
+* ./allumettes <<EOF r o 3 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 EOF... ok
+* Comparaison de rapide-gagne.expected et rapide-gagne.out... différents
+
+   | Mon niveau est rapide.                                              |  Mon niveau est rapide 
+   |                                                                     |  je prends3  allumettes
+   | Je prends 3 allumettes.                                             <
+   |                                                                     <
+   |                                                                     |  je prends3  allumettes
+   | Je prends 3 allumettes.                                             <
+   |                                                                     <
+   | J'ai gagne.                                                         |
+   |                                                                     >
+   |                                                                     >  J'ai gagne
+
+
+--------------------------------------------------------------------------------
+### Test rapide-gagne-avec-erreurs.run
+--------------------------------------------------------------------------------
+
+* ./allumettes <<EOF r n 1 2 0 4 3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 EOF... ok
+* Comparaison de rapide-gagne-avec-erreurs.expected et rapide-gagne-avec-erreurs.out... différents
+
+   | Mon niveau est rapide.                                                    |  Mon niveau est rapide 
+   |                                                                           |  je prends3  allumettes
+   | Je prends 3 allumettes.                                                   <
+   |                                                                           <
+   |                                                                           |  je prends3  allumettes
+   | Je prends 3 allumettes.                                                   <
+   |                                                                           <
+   |                                                                           |  je prends3  allumettes
+   | Je prends 3 allumettes.                                                   <
+   |                                                                           <
+   | Arbitre : Il faut prendre au moins une allumette.                         |  Arbitre : Il faut prendre au moins une allumette.Combien d'allumettes pre
+   | Combien d'allumettes prenez-vous ? 4                                      <
+   | J'ai gagne.                                                               |
+   |                                                                           >
+   |                                                                           >  J'ai gagne
+
+
+--------------------------------------------------------------------------------
+### Test rapide-perdu.run
+--------------------------------------------------------------------------------
+
+* ./allumettes <<EOF r n 3 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 EOF... ok
+* Comparaison de rapide-perdu.expected et rapide-perdu.out... différents
+
+   | Mon niveau est rapide.                                              |  Mon niveau est rapide 
+   |                                                                     |  je prends3  allumettes
+   | Je prends 3 allumettes.                                             <
+   |                                                                     <
+   |                                                                     |  je prends3  allumettes
+   | Je prends 3 allumettes.                                             <
+   |                                                                     <
+   |                                                                     |  je prends2  allumettes
+   | Je prends 2 allumettes.                                             |  Vous avez gagne
+   |                                                                     <
+   | Vous avez gagne.                                                    <
+
