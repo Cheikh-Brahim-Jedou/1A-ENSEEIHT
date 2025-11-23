@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Locations>
+  <Project>
+    <vfs_file>C:\Users\hp\Desktop\ENSSEIHT\tp pim\TP03\TP03\tp03.gpr</vfs_file>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>C:\Users\hp\Desktop\ENSSEIHT\tp</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>C:\Users\hp\Desktop\ENSSEIHT\tp pim\TP03\TP03\pim\TP03\TP03\comprendre_mode_parametre.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>C:\Users\hp\Desktop\ENSSEIHT\tp</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\hp\Desktop\ENSSEIHT\tp pim\TP03\TP03\tp03.gpr</vfs_project>
+      <vfs_file>C:\Users\hp\Desktop\ENSSEIHT\tp pim\TP03\TP03\comprendre_mode_parametre.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 13" >
+      <vfs_project>C:\Users\hp\Desktop\ENSSEIHT\tp pim\TP03\TP03\tp03.gpr</vfs_project>
+      <vfs_file>C:\Users\hp\Desktop\ENSSEIHT\tp pim\TP03\TP03\comprendre_mode_parametre.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\hp\Desktop\ENSSEIHT\tp pim\TP03\TP03\tp03.gpr</vfs_project>
+      <vfs_file>C:\Users\hp\Desktop\ENSSEIHT\tp pim\TP03\TP03\nb_jours_mois.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\hp\Desktop\ENSSEIHT\tp pim\TP03\TP03\tp03.gpr</vfs_project>
+      <vfs_file>C:\Users\hp\Desktop\ENSSEIHT\tp pim\TP03\TP03\premier_programme.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>C:\Users\hp\Desktop\ENSSEIHT\tp pim\TP03\TP03\tp03.gpr</vfs_project>
+      <vfs_file>C:\Users\hp\Desktop\ENSSEIHT\tp pim\TP03\TP03\puissance.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>
