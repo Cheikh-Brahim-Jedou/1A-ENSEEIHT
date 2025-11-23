@@ -1,0 +1,256 @@
+========================================================
+Modules :
+========================================================
+  241 arbre.adb
+  158 compresser.adb
+  188 decompresser.adb
+  198 huffman.adb
+  175 lca.adb
+   33 test_arbre.adb
+   58 test_huffman.adb
+   46 test_lca.adb
+ 1097 total
+  90 arbre.ads
+  69 huffman.ads
+  76 lca.ads
+   6 sda_exceptions.ads
+ 241 total
+ 
+========================================================
+compresser.adb
+========================================================
+ 
+--------------warnings / erreurs----------------
+0
+0
+ 
+CM0F0O-------------------------------
+./compresser
+
+raised COMPRESSER.PAS_ARGUMENT : compresser.adb:49
+ 
+CM0F1O-------------------------------
+./compresser -b
+
+raised ADA.IO_EXCEPTIONS.NAME_ERROR : -b: No such file or directory
+ 
+CM0F2O-------------------------------
+./compresser -b -s
+
+raised ADA.IO_EXCEPTIONS.NAME_ERROR : -s: No such file or directory
+ 
+CM1F0O-------------------------------
+./compresser ../../extest.txt
+(28)  
+\--0--(10)  
+|     \--0--(4)  
+|     |     \--0--(1)  
+|     |     |     \--0--(0)  '\$'
+|     |     |     \--1--(1)  '\n'
+|     |     \--1--(3)  'd'
+|     \--1--(6)  'c'
+\--1--(18)  
+      \--0--(8)  'b'
+      \--1--(10)  'a'
+'\$' --> 0000
+'\n' --> 0001
+'d' --> 001
+'c' --> 01
+'b' --> 10
+'a' --> 11
+...............................................................
+-rw-r--r-- 1 hamrouni gea 17 févr. 11 15:59 ../../extest.txt.hff
+...............................................................
+ 
+CM1F0O avec valgrind-----------------
+==672446==   total heap usage: 34 allocs, 34 frees, 18,220 bytes allocated
+ 
+CM1F0O DIFF....................................................
+Différence / initial : ../../extest.txt.hff décompressé avec /mnt/n7fs/ens/ens_zh/PIM/decompresser
+1c1
+< aaaaaaaaaabbbbbbbbccccccddd
+---
+> aaaaaaaaaacccccccdcccccddd
+\ Pas de fin de ligne à la fin du fichier
+ 
+CM1F5OS-------------------------------
+./compresser -s -b -s -b -s ../../extest.txt
+...............................................................
+-rw-r--r-- 1 hamrouni gea 17 févr. 11 15:59 ../../extest.txt.hff
+...............................................................
+ 
+CM2F0O-------------------------------
+./compresser ../../extest.txt ../../extest2.txt
+
+raised COMPRESSER.INVALID_ARGUMENT : compresser.adb:60
+...............................................................
+-rw-r--r-- 1 hamrouni gea 28 févr.  5 16:42 ../../extest2.txt
+-rw-r--r-- 1 hamrouni gea 28 févr.  6 11:28 ../../extest.txt
+...............................................................
+ 
+CM2F1OS-------------------------------
+./compresser -s ../../extest.txt ../../extest2.txt
+
+raised COMPRESSER.INVALID_ARGUMENT : compresser.adb:60
+...............................................................
+-rw-r--r-- 1 hamrouni gea 28 févr.  5 16:42 ../../extest2.txt
+-rw-r--r-- 1 hamrouni gea 28 févr.  6 11:28 ../../extest.txt
+...............................................................
+ 
+========================================================
+decompresser.adb
+========================================================
+ 
+------------warnings / erreurs--------------
+0
+0
+ 
+DC1F0O----------------------------------------
+ 
+./decompresser ../../extest.txt.hff
+-----------------------------------------
+Différence / initial : ../../extest.txt compressé et décompressé par moi
+1c1,2
+< aaaaaaaaaabbbbbbbbccccccddd
+---
+> baaaaaaaaaaaaaaaaaaaaabbbbbbbcbbbbbcccd
+> 
+ 
+DC1F0O avec valgrind-----------------
+valgrind ./decompresser -s ../../ex3test.txt.hff
+==672481==   total heap usage: 1 allocs, 0 frees, 704 bytes allocated
+-----------------------------------------
+Différence / initial : ../../ex3test.txt.hff décompressé par moi
+../../ex3test.txt.hff.d n'existe pas
+ 
+DC0F1O-----------------------------------------
+./decompresser -b
+
+raised DECOMPRESSER.NON_HUFFMAN_FILE : decompresser.adb:68
+ 
+DC0F2O-----------------------------------------
+./decompresser -b -s
+
+raised DECOMPRESSER.ERREUR_NB_ARGUMENT : decompresser.adb:59
+ 
+DC1F5O-----------------------------------------
+./decompresser -s -b -s -b -s ../../extest.txt.hff
+
+raised DECOMPRESSER.ERREUR_NB_ARGUMENT : decompresser.adb:59
+...............................................................
+-rw-r--r-- 1 hamrouni gea 28 févr.  6 11:28 ../../extest.txt
+-rw-r--r-- 1 hamrouni gea 17 févr. 11 15:59 ../../extest.txt.hff
+...............................................................
+ 
+DC2F0O-----------------------------------------
+./decompresser ../../extest.txt.hff ../../extest2.txt.hff
+
+raised DECOMPRESSER.ERREUR_NB_ARGUMENT : decompresser.adb:59
+...............................................................
+-rw-r--r-- 1 hamrouni gea 28 févr.  5 16:42 ../../extest2.txt
+-rw-r--r-- 1 hamrouni gea 17 févr. 11 15:59 ../../extest2.txt.hff
+-rw-r--r-- 1 hamrouni gea 28 févr.  6 11:28 ../../extest.txt
+-rw-r--r-- 1 hamrouni gea 17 févr. 11 15:59 ../../extest.txt.hff
+...............................................................
+ 
+DC2F1OS-----------------------------------------
+./decompresser -s ../../extest.txt.hff ../../extest2.txt.hff
+
+raised DECOMPRESSER.ERREUR_NB_ARGUMENT : decompresser.adb:59
+-----------------------------------------
+-rw-r--r-- 1 hamrouni gea 28 févr.  5 16:42 ../../extest2.txt
+-rw-r--r-- 1 hamrouni gea 17 févr. 11 15:59 ../../extest2.txt.hff
+-rw-r--r-- 1 hamrouni gea 28 févr.  6 11:28 ../../extest.txt
+-rw-r--r-- 1 hamrouni gea 17 févr. 11 15:59 ../../extest.txt.hff
+-----------------------------------------
+ 
+========================================================
+TESTS
+========================================================
+ 
+TEST :test_arbre.adb
+--------------warnings / erreurs----------------
+0
+0
+-----------------------------------------
+test_arbre
+(1000)  
+\--0--(300)  
+|     \--0--(200)  '{'
+|     \--1--(100)  '�'
+\--1--(700)  
+      \--0--(400)  
+      |     \--0--(200)  '{'
+      |     \--1--(200)  '{'
+      \--1--(300)  
+            \--0--(200)  '{'
+            \--1--(100)  '�'
+ 
+TEST :test_huffman.adb
+--------------warnings / erreurs----------------
+0
+0
+-----------------------------------------
+test_huffman
+(7)  
+\--0--(3)  
+|     \--0--(1)  '�'
+|     \--1--(2)  
+|           \--0--(1)  
+|           |     \--0--(0)  '\$'
+|           |     \--1--(1)  '~'
+|           \--1--(1)  '�'
+\--1--(4)  '}'
+'�' --> 00
+'\$' --> 0100
+'~' --> 0101
+'�' --> 011
+'}' --> 1
+00100111(0)  
+\--0--(0)  
+|     \--0--(0)  
+|     |     \--0--(0)  'y'
+|     |     \--1--(0)  'z'
+|     \--1--(0)  '{'
+\--1--(0)  
+      \--0--(0)  'x'
+      \--1--(0)  
+            \--0--(0)  'n'
+            \--1--(0)  'd'
+ 
+TEST :test_lca.adb
+--------------warnings / erreurs----------------
+0
+0
+-----------------------------------------
+test_lca
+-->["deux" : 2]-->["un" : 1]--E
+ 
+========================================================
+CONTRATS
+========================================================
+ 
+ 
+lca.ads:		Post => Est_Vide (Sda);
+lca.ads:		Post => Taille'Result >= 0
+lca.ads:		Post => Cle_Presente (Sda, Cle) and (La_Valeur (Sda, Cle) = Valeur)   -- valeur insérée
+ 
+========================================================
+EXCEPTIONS
+========================================================
+ 
+sda_exceptions.ads:	Cle_Absente_Exception  : Exception;	-- une clé est absente d'un SDA
+compresser.adb:    Invalid_argument : Exception ;
+compresser.adb:    Pas_argument : Exception ;
+decompresser.adb:   Pas_argument : Exception ;
+decompresser.adb:   erreur_nb_argument : Exception ;
+decompresser.adb:   non_huffman_file : Exception ;
+ 
+compresser.adb:      raise pas_argument ;
+compresser.adb:         raise Invalid_argument ;
+decompresser.adb:      raise Pas_argument ;
+decompresser.adb:      raise erreur_nb_argument ;
+decompresser.adb:           raise non_huffman_file  ;
+decompresser.adb:      raise non_huffman_file  ;
+lca.adb:            raise Cle_Absente_Exception ; -- léver l'exception si le cle n'est pas precense             
+ 
