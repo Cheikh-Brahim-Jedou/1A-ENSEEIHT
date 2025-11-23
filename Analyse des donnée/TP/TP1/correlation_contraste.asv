@@ -1,0 +1,13 @@
+% function correlation_contraste (pour exercice_1.m)
+
+function [correlation,contraste] = correlation_contraste(X)
+r= mean(X(:,1),2);
+v= mean(X(:,2) ,2);
+b= mean(X(:,3),2);
+x=[r v b];
+Xe=X-repmat(x',length(X) ,1 );
+sigma=1/3*Xe'*Xe;
+correlation=[sigma(1,2)/(sqrt(sigma(1,1)*sigma(2,2))),sigma(1,3)/(sqrt(sigma(1,1)*sigma(3,3))),sigma(2,3)/(sqrt(sigma(2,2)*sigma(3,3)))];
+contraste=diag(sigma)/trace(sigma);
+   
+end
